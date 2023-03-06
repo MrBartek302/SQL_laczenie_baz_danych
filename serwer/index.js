@@ -1,4 +1,4 @@
- const express = require('express')
+const express = require('express')
  const cors = require('cors')
  const mysql = require('mysql')
 
@@ -53,5 +53,4 @@ app.get("/add/:imie/:nazwisko/:klasa", (req,res)=>{
 
 app.listen(port, ()=>{
     console.log("Aplikacja działa na porcie: "+port)
-}) 
-
+})
