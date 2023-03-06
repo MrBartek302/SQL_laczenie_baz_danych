@@ -25,14 +25,29 @@ app.get("/", (req, res)=>{
     res.send("ok")
 })
 
+//pobieramy z bazy danych
 app.get("/select", (req,res)=>{
     //pobiera nam z naszej bazy danych to co stworzyliśmy
     const sql = "SELECT * FROM nwm"
-    //zapytanie
+    //tworzymy zapytanie
     con.query(sql, function(err, result, fields){
         if(err) console.log(err)
-        
         else res.send(result)
+    })
+})
+
+//SELECT pobiera a INSERT dodaje
+
+//wysyłamy do bazy danych
+app.get("/add/:imie/:nazwisko/:klasa", (req,res)=>{
+    const imie = req.params.imie
+    const nazwisko = req.params.nazwisko
+    const klasa = req.params.klasa
+    //tworzymy zapytanie
+    const sql = `INSERT INTO nwm (imie,nazwisko,klasa) VALUES ('${imie}', '${nazwisko}', '${klasa}')`
+    con.query(sql, function(err, result, fields){
+        if(err) console.log(err)
+        else res.send("Dodano record")
     })
 })
 
