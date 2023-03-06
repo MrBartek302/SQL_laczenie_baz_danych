@@ -1,1 +1,1 @@
-# SQL_laczenie_baz_danych
+# SQL ---> połączenie z bazą danych
