@@ -16,17 +16,12 @@ var con = mysql.createConnection({
 })
 //potwierdzenie połączenia
 con.connect(function(err){
-    if(err){ 
-        console.log(err)}
+    if(err) console.log(err)
     else console.log("Połączono z bazą danych")    
 })
 
-app.get("/", (req, res)=>{
-    res.send("ok")
-})
-
 //pobieramy z bazy danych
-app.get("/select", (req,res)=>{
+app.get("/pobierz", (req,res)=>{
     //pobiera nam z naszej bazy danych to co stworzyliśmy
     const sql = "SELECT * FROM nwm"
     //tworzymy zapytanie
