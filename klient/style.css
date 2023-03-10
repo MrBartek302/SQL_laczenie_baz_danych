@@ -1,0 +1,34 @@
+body{
+    box-sizing: border-box; 
+    margin: 0;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100vh;
+    grid-template-areas: 
+    "interfejs gra";
+}
+
+#gra{
+    grid-area: gra;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color:#343a40;
+}
+
+
+#interfejs{
+    grid-area: interfejs;
+    background-color:#495057;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    border-right: solid white 3px;
+}
+
+
+
