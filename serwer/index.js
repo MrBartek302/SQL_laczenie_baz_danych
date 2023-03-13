@@ -3,9 +3,7 @@ const express = require('express')
  const mysql = require('mysql')
 
 const app = express()
-
 app.use(cors())
-
 const port = 3000
 //łączymy się z bazą danych
 var con = mysql.createConnection({
